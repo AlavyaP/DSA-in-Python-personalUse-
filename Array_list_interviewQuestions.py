@@ -95,7 +95,7 @@ print(permutation(list1,list2))
 '''
 
 # Question 7 --> Rotate Matrix - Given an image represented by an NxN matrix write a method to rotate the image by 90 degrees.?
-# '''
+'''
 import numpy as np
 
 myArray = np.array([[1,2,3], [4,5,6], [7,8,9]])
@@ -120,4 +120,4 @@ def rotateMatrix(matrix):
 
 print(rotateMatrix(myArray))    
 
-# '''
+'''
