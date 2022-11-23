@@ -104,18 +104,7 @@ class SLinkedList:
             print("NO List")
         else:
             self.head = None
-            self.tail = None
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+            self.tail = None   
         
          
 # Exceution Code are Below
