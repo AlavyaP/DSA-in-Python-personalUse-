@@ -17,7 +17,7 @@ class Queue:
             return False
         
     # insertion in the queue >> enqueue
-    def enqueue(self,value):    #time and space Complexity  == O(N) worst time complexity = O(n^2)
+    def enqueue(self,value):    #time and space Complexity  = O(N) worst time complexity = O(n^2)
         self.items.append(value)
         return "The item has been Inserted at the end of the queue"
     
