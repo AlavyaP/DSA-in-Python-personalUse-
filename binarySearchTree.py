@@ -119,9 +119,10 @@ def deleteNode(rootNode,nodeValue):         # Time Complexity = O(log N) ;; Spac
 # Delete Entire Tree
 def deleteBST(rootNode):            # Time Complexity = O(1) ;; Space Complexity = O(1)
     rootNode.data = None
-    rootNode.leftChild.data = None
-    rootNode.rightChild.data = None
+    rootNode.leftChild = None
+    rootNode.rightChild = None
     return "The Tree Has Been Deleted"
+
 
     
 
