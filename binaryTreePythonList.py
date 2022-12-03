@@ -1,5 +1,6 @@
 # Tree Using Python List
 
+
 class BinaryTree:
     def __init__(self,size):
         self.customList = size * [None]
@@ -85,8 +86,9 @@ newBT.insertNode("Coffee")
 # newBT.preOrderTraversal(1)
 # newBT.inOrderTraversal(1)
 # newBT.postOrderTraversal(1)
+newBT.levelOrderTraversal(1)
 # print(newBT.deleteNode("Hot"))
-print(newBT.deleteBT())
+# print(newBT.deleteBT())
 
 # newBT.levelOrderTraversal(1)
 
