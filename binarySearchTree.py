@@ -111,6 +111,9 @@ def deleteNode(rootNode,nodeValue):         # Time Complexity = O(log N) ;; Spac
             rootNode =  None
             return temp
         # delete if node has 2 children
+        # this line of code might be broken as it may not delete the right side child node
+        # this might not work to the excepted result
+        # will be updated in future
         temp = minValueNode(rootNode.rightChild)
         rootNode.data = temp.data
         rootNode.rightChild = deleteNode(rootNode.rightChild, temp.data)
