@@ -113,6 +113,10 @@ def extractNode (rootNode,heapType):         #Time Complexity = O(Log N) && Spac
         rootNode.heapSize -=1 
         heapifyTreeExtract(rootNode, 1, heapType)
         return extractNode
+# Delete a Entire Binary Heap
+def deleteEntireBP(rootNode):       #Time Complexity = O(1) && Space Complexity = O(1)
+    rootNode.customList = None
+
             
          
         
@@ -123,5 +127,6 @@ insertNode(newHeap, 5, "Max")
 insertNode(newHeap, 2, "Max")
 insertNode(newHeap, 1, "Max")
 # print(extractNode(newHeap,"Max"))
-extractNode(newHeap,"Max")
+# extractNode(newHeap,"Max")
+deleteEntireBP(newHeap)
 levelOrderTraversal(newHeap)
