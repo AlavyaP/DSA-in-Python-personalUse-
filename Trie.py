@@ -37,7 +37,7 @@ class Trie:
         
         
 # delete String in a Trie
-def deleteString(root,word,index):
+def deleteString(root,word,index):      #Time Complexity = O(N) && Space Complexity = O(1)
     ch = word[index]
     currentNode = root.children.get(ch)
     canThisNodeBeDeleted = False
