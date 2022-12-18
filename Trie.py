@@ -35,7 +35,6 @@ class Trie:
         else:
             return False
         
-        
 # delete String in a Trie
 def deleteString(root,word,index):      #Time Complexity = O(N) && Space Complexity = O(1)
     ch = word[index]
