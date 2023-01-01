@@ -1,6 +1,6 @@
 import math
 
-# bubble sort 
+# Bubble sort 
 def bubbleSort(customList):             #Time Complexity = O(N^2) || Space Complexity = O(1)
     for i in range (len(customList)-1):
         for j in range (len(customList)-i-1):
@@ -32,6 +32,8 @@ def insertionSort(customList):     #Time Complexity = O(N^2) || Space Complexity
     # print (customList)  >> this is for the insertSort only, we use return for bucketSort to get the value after sorting the elements from each buckets
     return (customList)
 
+
+# Bucket Sort
 def bucketSort(customList):                 #Time Complexity = O(N^2) || Space Complexity = O(N)
     numberOfBuckets = round(math.sqrt(len(customList)))
     maxValue = max(customList)
@@ -58,7 +60,7 @@ def bucketSort(customList):                 #Time Complexity = O(N^2) || Space C
     return (customList)
 
 
-# merge sort  helper function
+# Merge sort  helper function
 def merge(customList, l, m, r):
     n1 = m -l + 1 
     n2 = r - m
