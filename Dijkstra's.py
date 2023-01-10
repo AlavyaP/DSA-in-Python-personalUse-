@@ -2,7 +2,7 @@
 import heapq
 # Class for edge
 class Edge:
-    def __init__(self,weight,start_vertex,target_vertex):
+    def __init__(self,weight, start_vertex, target_vertex):
         self.weight = weight
         self.start_vertex = start_vertex
         self.target_vertex = target_vertex
@@ -14,20 +14,19 @@ class Node:
         self.visited = False
         # previous node that we come to this node
         self.predecessor = None
-        self.neighbor = []
+        self.neighbors = []
         self.min_distance = float("inf")
         
     # less than
     def __lt__(self,other_node):
-        return self.min_distance < other_node.min_distance
+        return (self.min_distance < other_node.min_distance)
     
     # adding the edge between the nodes
     def add_edge(self,weight,destination_vertex):
-        edge = Edge(self,weight,destination_vertex)
-        self.neighbor.append(edge)
+        edge = Edge(weight,self,destination_vertex)
+        self.neighbors.append(edge)
         
 # Dijkstra's Algorithm
-
 class Dijkstra:
     def __init__(self):
         self.heap = []
@@ -41,23 +40,22 @@ class Dijkstra:
             actual_vertex = heapq.heappop(self.heap)
             if actual_vertex.visited:
                 continue
-            # consider neighbor
-            for edge in actual_vertex.neighbor:
+            # consider neighbors
+            for edge in actual_vertex.neighbors:
                 start = edge.start_vertex
                 target = edge.target_vertex
                 new_distance = start.min_distance + edge.weight
-                if new_distance  < target.min_distance :
+                if (new_distance < target.min_distance) :
                     target.min_distance = new_distance
                     target.predecessor = start
                     # update the heap
                     heapq.heappush(self.heap,target)
-                    
             actual_vertex.visited = True
             
     # for getting the shortest path
     def get_shortest_path(self, vertex):
         print(f"The shortest path to the vertex is: {vertex.min_distance}")
-        actual_vertex = vertex
+        actual_vertex = vertex 
         while actual_vertex is not None:
             print(actual_vertex.name, end=" ")
             actual_vertex = actual_vertex.predecessor
@@ -102,4 +100,5 @@ nodeH.add_edge(14, nodeG)
 algorithm = Dijkstra()
 algorithm.calculate(nodeA)
 algorithm.get_shortest_path(nodeG)
+
 
