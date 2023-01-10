@@ -8,7 +8,7 @@ class Graph:
         self.gdict = gdict
         
     # BFS code 
-    def bfs(self,start,end):                    #Time Complexity = O(E) && Space Complexity = O(E)
+    def bfs(self,start,end):                    #Time Complexity = O(E) && Space Complexity = O(E clea)
         queue = []
         queue.append([start])
         while queue:
