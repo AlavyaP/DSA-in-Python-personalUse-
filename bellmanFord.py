@@ -20,7 +20,7 @@ class Graph:
             print('  ' + key, ' :    ', value)
 
     # bellman 
-    def bellmanFord(self,src):
+    def bellmanFord(self,src):            #Time Complexity = O[VE] && Space Complexity = O[V]
         dist = {i : float("Inf") for i in self.nodes}
         dist[src] = 0
         

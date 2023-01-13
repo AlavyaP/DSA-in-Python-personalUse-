@@ -10,7 +10,7 @@ class Graph:
         self.gdict[vertex].append(edge)
         
     # BFS   
-    def bfs(self,vertex):
+    def bfs(self,vertex):             #Time Complexity = O[V^2] && Space Complexity = O[E]
         visited = [vertex]
         queue = [vertex]
         while queue:
